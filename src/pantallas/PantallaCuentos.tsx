@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { fraseMenu, urlVoz } from '../audio/frases'
 import { limpiarVoces, reproducir } from '../audio/reproductor'
+import { LogoTeo } from '../componentes/LogoTeo'
 import { urlImagen } from '../datos/catalogos'
 import { CUENTOS, type Cuento } from '../juegos/cuentos/catalogo'
 import { indiceEn, planDeLectura, ventanaDe } from '../juegos/cuentos/lectura'
@@ -23,6 +24,7 @@ export function PantallaCuentos({ onMenu }: { onMenu: () => void }) {
       ) : (
         <>
           <header className="barra-juego">
+            <LogoTeo compacto />
             <h1>Cuentos</h1>
             <button type="button" className="boton-grande tono-cielo" onClick={alMenu}>
               Menú
@@ -96,6 +98,7 @@ function Lectura({ cuento, onVolver, onMenu }: { cuento: Cuento; onVolver: () =>
   return (
     <>
       <header className="barra-juego">
+        <LogoTeo compacto />
         <h1>{cuento.titulo}</h1>
         <button type="button" className="boton-grande tono-tinta" onClick={onVolver}>
           Cuentos

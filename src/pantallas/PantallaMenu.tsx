@@ -16,7 +16,7 @@ const TARJETAS: { id: JuegoId; titulo: string; imagen: string }[] = [
 export function PantallaMenu({ nombre, onElegir }: { nombre: string; onElegir: (juego: JuegoId | 'cuentos') => void }) {
   return (
     <section className="pantalla presentacion menu">
-      <LogoTeo compacto />
+      <LogoTeo />
       <h1>Hola, {nombre}</h1>
       <p className="subtitulo">Elegí un juego</p>
       <div className={cuentosVisibles ? 'menu-juegos con-cuentos' : 'menu-juegos'}>
